@@ -10,10 +10,10 @@ export default function Navbar() {
             </div>
 
             <ul>
-                <li><a className="navItems"href="Remeras">Remeras</a></li>
-                <li><a className="navItems"href="Gorras">Gorras</a></li>
-                <li><a className="navItems"href="Buzos">Buzos</a></li>
-                <li><a className="navItems"href="Scuderias">Scuderias</a></li>
+                <li><a className="navItems" href="Remeras">Remeras</a></li>
+                <li><a className="navItems" href="Gorras">Gorras</a></li>
+                <li><a className="navItems" href="Buzos">Buzos</a></li>
+                <li><a className="navItems" href="Scuderias">Scuderias</a></li>
                 <li><CartWidget /></li>
             </ul>
 
