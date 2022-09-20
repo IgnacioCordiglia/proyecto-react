@@ -1,0 +1,17 @@
+.ItemListContainer {
+    display:flex;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 20px;
+    border: 13px solid red;
+    background-color: black;
+}
+
+.title-sec {
+    font-family: 'f1_bold';
+    color:black;
+    font-size:2rem;
+    display: flex;
+    margin-left:30px;
+    padding-bottom:0px;
+  }

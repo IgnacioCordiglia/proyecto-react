@@ -1,0 +1,43 @@
+nav {
+    background-color:black;
+    display:flex;
+    font-family: 'f1_Bold';
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display:flex;
+    align-items: center;
+}
+
+.site-title{
+    color:red;
+    font-size: 2rem;
+    height:100%;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.title-logo {
+    display:flex;
+    align-items: center;
+}
+
+nav img {
+    margin:20px;
+}
+
+
+.navItems {
+    text-decoration: none;
+    color:white;
+    margin-left:20px;
+    margin-right:20px;
+    transition: all 0.15s ease-in;
+}
+
+nav a:hover {
+    color:gray;
+}

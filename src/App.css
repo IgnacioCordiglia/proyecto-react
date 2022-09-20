@@ -1,7 +1,25 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "f1_regular";
+  src: url("./fonts/Formula1-Regular.ttf") format("truetype");
 }
 
-#titulo {
-  color:red;
+@font-face {
+  font-family: "f1_black";
+  src: url("./fonts/Formula1-Black.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "f1_bold";
+  src: url("./fonts/Formula1-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "f1_wide";
+  src: url("./fonts/Formula1-Wide.ttf") format("truetype");
+}
+
+.App {
+  text-align: center;
+  
+}
+

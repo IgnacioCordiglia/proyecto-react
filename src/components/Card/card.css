@@ -8,11 +8,12 @@
     border-radius: 5px;
     width:300px;
     height:100%;
-    min-height:700px;
+    min-height:510px;
     box-shadow: 0px 0px 5px black;
     overflow:hidden;
     transition: all 0.15s ease-in;
     cursor: pointer;
+    font-family: "f1_regular";
 }
 
 .card:hover {
@@ -22,9 +23,31 @@
 .card button {
     border:none;
     background-color: white;
-    width:100%;
+    width:60%;
+    margin-bottom: 30px;
+    transition: all 0.15s ease-in;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: "f1_Regular";
 }
 
 .card button:hover {
-    background-color: gray;
+    background-color: black;
+    color:white;
+}
+
+.card .title {
+    margin-top:5px;
+    min-height:50px;
+    font-family: "f1_bold";
+    text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+}
+
+.card .price {
+    font-size: 2rem;
+    font-family: "f1_Bold";
+    margin-top:0;
+    margin-bottom:20px;
+    text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
 }
