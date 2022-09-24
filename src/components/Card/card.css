@@ -17,7 +17,8 @@
 }
 
 .card:hover {
-    background-color: gray;
+    background-color: #383840;
+    color:white;
 }
 
 .card button {
@@ -41,7 +42,6 @@
     margin-top:5px;
     min-height:50px;
     font-family: "f1_bold";
-    text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
 }
 
 .card .price {
@@ -49,5 +49,5 @@
     font-family: "f1_Bold";
     margin-top:0;
     margin-bottom:20px;
-    text-shadow: 1px 0 0 white, -1px 0 0 white, 0 1px 0 white, 0 -1px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+    
 }
