@@ -1,5 +1,5 @@
 nav {
-    background-color:black;
+    background-color:#14141c;
     display:flex;
     font-family: 'f1_Bold';
     align-items: center;
@@ -9,6 +9,7 @@ nav {
 nav ul {
     display:flex;
     align-items: center;
+    list-style-type: none;
 }
 
 .site-title{

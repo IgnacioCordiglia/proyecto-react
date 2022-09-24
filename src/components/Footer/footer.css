@@ -1,0 +1,22 @@
+footer {
+    background-color: #14141c;
+    padding-top:15px;
+    margin-bottom:0px;
+}
+
+footer p {
+    font-family: "f1_regular";
+    color:white;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+
+.white-line {
+    width:80%;
+}
+
+.sign {
+    margin-bottom: 0px;
+    margin-top:20px;
+    padding-bottom: 20px;
+}

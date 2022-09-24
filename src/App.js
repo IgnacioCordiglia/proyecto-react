@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import ItemListContainer from './components/ItemList/ItemListContainer';
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -16,6 +17,9 @@ function App() {
           <ItemListContainer title="Más vendidos"/>
       </div>
       </body>
+      <footer>
+        <Footer />
+      </footer>
     </div>
       
   );
