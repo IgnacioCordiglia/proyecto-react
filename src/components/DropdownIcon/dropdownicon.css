@@ -1,0 +1,17 @@
+.icon-button {
+    text-decoration: none;
+    color:white;
+}
+
+.nav-item {
+    margin-left:20px;
+    margin-right:10px;
+}
+
+.dropdown-arrow {
+    color: red;
+}
+
+a:hover {
+    color:white
+}

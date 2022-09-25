@@ -1,0 +1,23 @@
+.dropdown {
+    position:absolute;
+    left:0px;
+    top:77px;
+    width:100%;
+    background-color: red;
+    display:flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.dropdown .navItems {
+    color:black;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.dropdown .navItems:hover {
+    color:white;
+}

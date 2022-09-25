@@ -2,7 +2,6 @@ nav {
     background-color:#14141c;
     display:flex;
     font-family: 'f1_Bold';
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -19,11 +18,17 @@ nav ul {
     margin-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+    display:flex;
+    align-items: center;
 }
 
 .title-logo {
     display:flex;
-    align-items: center;
+}
+
+.title-logo a {
+    display:flex;
+    justify-content: center
 }
 
 nav img {
