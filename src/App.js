@@ -3,6 +3,8 @@ import './App.css';
 import ItemListContainer from './components/ItemList/ItemListContainer';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import ClickCounter from './components/ClickCounter/ClickCounter'
+
 
 function App() {
 
@@ -15,6 +17,7 @@ function App() {
       <body>
       <div className="divider">
           <ItemListContainer title="Más vendidos"/>
+          <ClickCounter />
       </div>
       </body>
       <footer>

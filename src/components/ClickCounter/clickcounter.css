@@ -1,0 +1,15 @@
+.clickButton {
+    margin:5px;
+    border-radius: 5px;
+    transition: all 0.15s ease-in;
+    border:none;
+    justify-content:center;
+    align-items: center;
+    width:20px;
+    height: 20px;
+}
+
+.clickButton:hover {
+    background-color:#383840;
+    color:white;
+}
