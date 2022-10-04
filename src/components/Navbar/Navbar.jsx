@@ -2,14 +2,15 @@ import './navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import DropdownIcon from '../DropdownIcon/DropdownIcon'
 import DropdownMenu from '../DropdownMenu/DropdownMenu'
+import {Link} from "react-router-dom";
 
 export default function Navbar() {
     return (
         <nav className="nav">
             <div className="title-logo">
-                <a href="../App.js" className="mainPageLink">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg" />
-                </a>  
+                <Link to="/" className="mainPageLink">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg" alt="logo F1" />
+                </Link>
                 <h2 href="/" className="site-title">Store</h2>
                
             </div>

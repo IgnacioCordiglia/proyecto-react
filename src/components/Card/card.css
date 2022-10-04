@@ -5,7 +5,6 @@
 
 .card{
     background-color: white;
-    margin:15px 20px;
     border-radius: 5px;
     width:300px;
     height:100%;
@@ -17,6 +16,7 @@
     font-family: "f1_regular";
     max-height: 500px;
     max-width:249px;
+    margin-top:2%;
 }
 
 .card:hover {
@@ -25,19 +25,20 @@
 }
 
 .details {
-    min-height: 30px;
-    margin:px;
+    min-height: 20px;
+    font-size:1rem;
 }
 
-.card button {
+.seeDetails {
     border:none;
     background-color: white;
-    width:60%;
+    width:50%;
     transition: all 0.15s ease-in;
     border-radius: 5px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    margin-bottom:10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top:3%;
+    margin-bottom:3%;
     font-family: "f1_Regular";
 }
 
@@ -48,14 +49,13 @@
 
 .card .title {
     margin-top:5px;
-    min-height:60px;
     font-family: "f1_bold";
+    font-size:1.3rem;
 }
 
 .card .price {
     font-size: 2rem;
     font-family: "f1_Bold";
     margin-top:0;
-    margin-bottom:20px;
-    
+    margin-bottom:2%;
 }

@@ -45,7 +45,7 @@ const data = [
 
     {
         id: 5,
-        title: "Remera Aston Martin",
+        title: "Rem. Aston Martin",
         img: "https://alltexsantafe.com.ar/wp-content/uploads/2022/03/aston-martin-2022.jpg",
         price: 3000,
         detail: "Remera estampada Aston Martin 2022",
@@ -89,10 +89,10 @@ const data = [
     
     {
         id: 9,
-        title: "Gorra Ferrari Amarilla",
+        title: "Gorra Ferrari 75 años",
         img: "https://alltexsantafe.com.ar/wp-content/uploads/2022/03/5282c2b10163e8ba8cda83e29106eff98f75f640e928869c6ad3f4b7d859e8e177480.jpeg",
         price: 2000,
-        detail: "Gorra Ferrari Amarilla MD10",
+        detail: "Gorra Ferrari Amarilla y Negra MD10",
         stock: 10,
         category: "Gorra",
         team: "Ferrari",     
@@ -100,10 +100,10 @@ const data = [
 
     {
         id: 10,
-        title: "Gorra Ferrari",
+        title: "Gorra Ferrari Roja",
         img: "https://alltexsantafe.com.ar/wp-content/uploads/2022/03/6c56d797d24cc9b478d2d0ce6e55c2cbb0c920b584c9f1a1b3d7a84324717b3077480.jpeg",
         price: 2000,
-        detail: "Gorra Ferrari roja MD1",
+        detail: "Gorra Ferrari Roja y Negra MD1 2022",
         stock: 10,
         category: "Gorra",
         team: "Ferrari",     
@@ -125,7 +125,7 @@ const data = [
         title: "Gorra Red Bull Negra",
         img: "https://alltexsantafe.com.ar/wp-content/uploads/2022/06/16b.jpg",
         price: 2000,
-        detail: "Gorra Red Bull negra MD4",
+        detail: "Gorra Red Bull Negra y Azul MD4",
         stock: 10,
         category: "Gorra",
         team: "Red Bull",     
@@ -144,10 +144,10 @@ const data = [
 
     {
         id: 14,
-        title: "Gorra Mercedes Negra",
+        title: "Gorra Mercedes",
         img: "https://alltexsantafe.com.ar/wp-content/uploads/2022/03/1e1538455d410bf0e75788fd447e7d8344a56646040e1108c5f716818df6fe7777480.jpeg",
         price: 2000,
-        detail: "Gorra Mercedes Negra M6",
+        detail: "Gorra Mercedes Negra y Blanca M6",
         stock: 10,
         category: "Gorra",
         team: "Mercedes",     
@@ -158,7 +158,7 @@ const data = [
         title: "Buzo Ferrari 2022",
         img: "https://alltexsantafe.com.ar/wp-content/uploads/2022/04/17fabc4c-7cfc-410f-a117-5c53ac9c9b2a.jpg",
         price: 6500,
-        detail: "Buzo Ferrari 2022",
+        detail: "Buzo Canguro Rojo Ferrari 2022",
         stock: 10,
         category: "Buzo",
         team: "Ferrari",     
@@ -169,7 +169,7 @@ const data = [
         title: "Buzo Mercedes 2022",
         img: "https://alltexsantafe.com.ar/wp-content/uploads/2022/05/ece16c49-995c-4e40-877c-ae0d9088cd4d.jpg",
         price: 6500,
-        detail: "Buzo canguro Mercedes 2022",
+        detail: "Buzo Canguro Negro Mercedes 2022",
         stock: 10,
         category: "Buzo",
         team: "Mercedes",     
@@ -207,5 +207,16 @@ export function getCategory(category) {
 export function getItems() {
     return new Promise((resolve) => {
         setTimeout(()=> resolve(data),1500);
+    });
+}
+
+export function getItemById(idParams) {
+    return new Promise((resolve) => {
+        let neededItem = data.find((item) => {
+            return item.id === Number(idParams);
+        });
+        console.log(idParams);
+        console.log(neededItem);
+        setTimeout(()=> resolve(neededItem),1000);
     });
 }

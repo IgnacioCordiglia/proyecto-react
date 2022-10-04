@@ -1,0 +1,43 @@
+.DetailedCard {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+    border: 13px solid red;
+    background-color: white;
+    padding:0px;
+    width:80%;
+}
+
+.DCimg {
+    width:40%;
+}
+
+.DCimg img {
+    width:50%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.DCtitle {
+    font-size: 2.5rem;
+    font-family: f1_bold;
+}
+
+.DCdetails {
+    font-size:1.2rem;
+    font-family: f1_regular;
+}
+
+.DCprice {
+    font-size:3rem;
+    font-family: f1_bold;
+    margin:0px;
+}
+
+.DCinfo {
+    text-align: center;
+    width:50%;
+}

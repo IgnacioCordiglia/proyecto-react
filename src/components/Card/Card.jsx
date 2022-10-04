@@ -1,4 +1,6 @@
 import "./card.css";
+import ClickCounter from "../ClickCounter/ClickCounter";
+import {Link} from "react-router-dom";
 
 export default function Card(props) {
 
@@ -8,10 +10,11 @@ export default function Card(props) {
         <img src={props.img} alt=""></img>
       </div>
       <div className="card-detail">
-        <h2 class="title">{props.title}</h2>
-        <p class="details">{props.detail}</p>
-        <h4 class="price">$ {props.price}</h4>
-        <button>Ver detalles</button>
+        <h2 className="title">{props.title}</h2>
+        <p className="details">{props.detail}</p>
+        <h4 className="price">$ {props.price}</h4>
+        <ClickCounter />
+        <Link to={`/item/${props.id}`}><button className="seeDetails">Ver detalles</button></Link>
       </div>
       
     </div>

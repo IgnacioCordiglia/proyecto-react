@@ -22,6 +22,7 @@ function ItemListContainer(props) {
             {itemsList.map((items) => {
                 return (
                     <Card
+                        id={items.id}
                         title={items.title}
                         img={items.img}
                         price={items.price}
