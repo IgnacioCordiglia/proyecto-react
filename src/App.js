@@ -21,8 +21,9 @@ function App() {
         <div className="divider">
           <Routes>
             <Route path="/" element= {<ItemListContainer title="Más vendidos"/>} />
+            <Route path="/category/:category" element = {<ItemListContainer/>} />
             <Route path="/item/:id" element={<ItemDetailContainer/>} />
-            
+            <Route path="/team/:team" element={<ItemListContainer/>} />
           </Routes>
           
         </div>

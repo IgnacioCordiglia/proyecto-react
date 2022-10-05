@@ -1,17 +1,38 @@
 import React, {useState, useEffect} from "react";
-import { getBestSellers} from "../../stockAPI/stockAPI";
+import {getItems,getTeam,getCategory, getBestSellers} from "../../stockAPI/stockAPI";
 import Card from "../Card/Card";
 import "./ItemListContainer.css";
 import FlexWrapper from "../FlexWrapper/FlexWrapper";
+import {useParams } from "react-router-dom";
 
 function ItemListContainer(props) {
     const [itemsList, setItemsList] = useState([]);
+    const categoryId = useParams().category;
+    const teamId = useParams().team;
 
     useEffect(() => {
-        getBestSellers().then((data) => {
+        getItems().then((data) => {
             setItemsList(data);
         });
     }, []);
+
+    if(categoryId!== undefined) {
+        getCategory(categoryId).then((data) => {
+            setItemsList(data);
+        });
+    } 
+
+    if(teamId!== undefined) {
+        getTeam(teamId).then((data) => {
+            setItemsList(data);
+        });
+    } 
+
+    if(teamId=== undefined && categoryId=== undefined) {
+        getBestSellers().then((data) => {
+            setItemsList(data);
+        });
+    } 
 
     return (
     <div>

@@ -17,7 +17,7 @@ const data = [
         price: 3000,
         detail: "Remera estampada Alpha Tauri 2022",
         stock: 10,
-        cateogory: "Remera",
+        category: "Remera",
         team: "Alpha Tauri",     
     },
 
@@ -165,7 +165,7 @@ const data = [
     },
 
     {
-        id: 13,
+        id: 16,
         title: "Buzo Mercedes 2022",
         img: "https://alltexsantafe.com.ar/wp-content/uploads/2022/05/ece16c49-995c-4e40-877c-ae0d9088cd4d.jpg",
         price: 6500,
@@ -176,7 +176,7 @@ const data = [
     },
 
     {
-        id: 14,
+        id: 17,
         title: "Buzo Red Bull 2022",
         img: "https://alltexsantafe.com.ar/wp-content/uploads/2022/04/7f84e3d2-6aa8-4e9a-b934-310954f366a4.jpg",
         price: 6500,
@@ -186,11 +186,33 @@ const data = [
         team: "Red Bull",     
     },
 
+    {
+        id: 18,
+        title: "Chomba Haas 2022",
+        img: "https://alltexsantafe.com.ar/wp-content/uploads/2022/07/WhatsApp-Image-2022-07-25-at-8.56.13-PM.jpeg",
+        price: 5000,
+        detail: "Chomba Azul Estampada Haas 2022",
+        stock: 10,
+        category: "Remera",
+        team: "Haas",     
+    },
+
+    {
+        id: 19,
+        title: "Remera Williams 2022",
+        img: "https://alltexsantafe.com.ar/wp-content/uploads/2022/07/453fdb2e-b833-4ca0-8043-bf191290ac78.jpg",
+        price: 3000,
+        detail: "Chomba Azul Estampada Williams 2022",
+        stock: 10,
+        category: "Remera",
+        team: "Williams",     
+    },
+
 ];
 
 
 export function getBestSellers() {
-    let bestSellers = data.filter(function(x) { return x.id <33});
+    let bestSellers = data.filter(function(x) { return x.id <5});
     return new Promise((resolve) => {
         setTimeout(()=> resolve(bestSellers),1500);
     });
@@ -198,8 +220,16 @@ export function getBestSellers() {
 
 export function getCategory(category) {
     let categoryList = data.filter(function(x) { return x.category === category});
+    
     return new Promise((resolve) => {
         setTimeout(()=> resolve(categoryList),1500);
+    });
+}
+
+export function getTeam(team) {
+    let teamList = data.filter(function(x) {return x.team === team});
+    return new Promise((resolve) => {
+        setTimeout(()=> resolve(teamList),1500);
     });
 }
 
@@ -215,8 +245,6 @@ export function getItemById(idParams) {
         let neededItem = data.find((item) => {
             return item.id === Number(idParams);
         });
-        console.log(idParams);
-        console.log(neededItem);
         setTimeout(()=> resolve(neededItem),1000);
     });
 }

@@ -2,7 +2,7 @@ import './navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import DropdownIcon from '../DropdownIcon/DropdownIcon'
 import DropdownMenu from '../DropdownMenu/DropdownMenu'
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 export default function Navbar() {
     return (
@@ -16,9 +16,9 @@ export default function Navbar() {
             </div>
 
             <ul>
-                <li><a className="navItems" href="Remeras">Remeras</a></li>
-                <li><a className="navItems" href="Gorras">Gorras</a></li>
-                <li><a className="navItems" href="Buzos">Buzos</a></li>
+                <li><NavLink className="navItems" to="/Category/Remera">Remeras</NavLink></li>
+                <li><NavLink className="navItems" to="/Category/Gorra">Gorras</NavLink></li>
+                <li><NavLink className="navItems" to="/Category/Buzo">Buzos</NavLink></li>
                 <DropdownIcon icon="Scuderias">
                     <DropdownMenu />
                 </DropdownIcon>

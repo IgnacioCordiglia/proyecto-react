@@ -10,7 +10,6 @@ function ItemDetailContainer(props) {
 
     useEffect(() => {
         
-        console.log(itemId);
         getItemById(itemId).then((data) => {
             setItem(data);
         });
