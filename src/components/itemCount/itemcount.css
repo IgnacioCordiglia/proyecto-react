@@ -7,6 +7,17 @@
     margin-bottom:5%;
 }
 
+.addCartButton {
+    font-family: "f1_regular";
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: all 0.15s ease-in;
+    border:none;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
 .clickButton {
     margin-left: 10px;
     margin-right: 10px;
@@ -18,6 +29,11 @@
 }
 
 .clickButton:hover {
+    background-color:#383840;
+    color:white;
+}
+
+.addCartButton:hover {
     background-color:#383840;
     color:white;
 }

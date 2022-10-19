@@ -6,6 +6,7 @@ import {Link, NavLink} from "react-router-dom";
 
 export default function Navbar() {
     return (
+        <header className="App-header">
         <nav className="nav">
             <div className="title-logo">
                 <Link to="/" className="mainPageLink">
@@ -24,7 +25,7 @@ export default function Navbar() {
                 </DropdownIcon>
                 <li><CartWidget /></li>
             </ul>
-
-    </nav>
+        </nav>
+    </header>
     )
 }

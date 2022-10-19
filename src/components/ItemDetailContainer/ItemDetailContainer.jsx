@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react";
 import "./itemdetailcontainer.css";
-import DetailedCard from "../DetailedCard/DetailedCard"
+import DetailedCard from "../CardDetail/CardDetail"
 import { getItemById } from "../../stockAPI/stockAPI";
 import {useParams } from "react-router-dom";
 

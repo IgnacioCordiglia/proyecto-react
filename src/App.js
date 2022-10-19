@@ -3,7 +3,7 @@ import './App.css';
 import ItemListContainer from './components/ItemList/ItemListContainer';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import ClickCounter from './components/ClickCounter/ClickCounter'
+import ClickCounter from './components/itemCount/ItemCount'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
@@ -11,28 +11,15 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 function App() {
 
   return (
-    <BrowserRouter>
-    <div className="App">
-      <header className="App-header">
+    <BrowserRouter> 
         <Navbar />
-      </header>
-      
-      <body>
-        <div className="divider">
           <Routes>
             <Route path="/" element= {<ItemListContainer title="Más vendidos"/>} />
-            <Route path="/category/:category" element = {<ItemListContainer/>} />
+            <Route path="/category/:categoryId" element = {<ItemListContainer show="category"/>} />
             <Route path="/item/:id" element={<ItemDetailContainer/>} />
-            <Route path="/team/:team" element={<ItemListContainer/>} />
+            <Route path="/team/:team" element={<ItemListContainer show="team"/>} />
           </Routes>
-          
-        </div>
-      </body>
-      
-      <footer>
         <Footer />
-      </footer>
-    </div>
     </BrowserRouter>
   );
 }

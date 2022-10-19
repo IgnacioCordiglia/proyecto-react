@@ -1,5 +1,5 @@
 import "./card.css";
-import ClickCounter from "../ClickCounter/ClickCounter";
+import ItemCount from "../itemCount/ItemCount";
 import {Link} from "react-router-dom";
 
 export default function Card(props) {
@@ -13,7 +13,7 @@ export default function Card(props) {
         <h2 className="title">{props.title}</h2>
         <p className="details">{props.detail}</p>
         <h4 className="price">$ {props.price}</h4>
-        <ClickCounter />
+        <ItemCount stock={props.stock}/>
         <Link to={`/item/${props.id}`}><button className="seeDetails">Ver detalles</button></Link>
       </div>
       
