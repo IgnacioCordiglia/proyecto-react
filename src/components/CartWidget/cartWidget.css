@@ -16,3 +16,9 @@ button:hover {
     background-color:red;
     color:#14141c;
 }
+
+span {
+    font-family: f1_bold;
+    font-size: 20px;
+    align-items: center;
+}

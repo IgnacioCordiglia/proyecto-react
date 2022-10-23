@@ -19,7 +19,7 @@ export default function ItemCount({stock,initial,text,onAddToCart}) {
         <FlexWrapper>
             <div className="clickCounterContainer">
                 <button className="clickButton" onClick={handleClickPlus}>+</button>
-                <strong>{clicks}</strong>
+                <strong className="cantItems">{clicks}</strong>
                 <button className="clickButton" onClick={handleClickMinus}>-</button>
             </div>
 
