@@ -10,39 +10,44 @@ function ItemListContainer(props) {
     const [itemsList, setItemsList] = useState([]);
     const categoryId = useParams().categoryId;
     const teamId = useParams().team;
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         getItems().then((data) => {
             setItemsList(data);
+            setIsLoading(false);
         });
     }, []);
 
     if(categoryId!== undefined) {
         getCategory(categoryId).then((data) => {
             setItemsList(data);
+            setIsLoading(false);
         });
     } 
 
     if(teamId!== undefined) {
         getTeam(teamId).then((data) => {
             setItemsList(data);
+            setIsLoading(false);
         });
     } 
 
     if(teamId=== undefined && categoryId=== undefined) {
         getBestSellers().then((data) => {
             setItemsList(data);
+            setIsLoading(false);
         });
     } 
-    if (props.title)
-        return (
+
+    return (
         <div>
             <h2 className="title-sec">{props.title}</h2>
 
             <div className="ItemListContainer">
                 <FlexWrapper>
-                {itemsList.map((items) => {
-                
+                {isLoading ? <Loader /> :
+                    itemsList.map((items) => {
                         return(
                             <Card
                                 id={items.id}
@@ -55,15 +60,13 @@ function ItemListContainer(props) {
                                 category={items.category}
                             />
                         );
-
-                    return <Loader />;
-                })}
-            </FlexWrapper>
+                    })
+                }
+                </FlexWrapper>
+            </div>
         </div>
-    </div>
-    )
+    );
 
-    return <Loader />;
 }
 
 export default ItemListContainer;
