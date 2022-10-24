@@ -2,3 +2,9 @@
     margin-top:5%;
     margin-bottom:5%;
 }
+
+.errorMsg {
+    min-height: 267px;
+    font-family: f1_regular;
+    color:red;
+}

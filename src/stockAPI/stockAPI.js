@@ -241,10 +241,16 @@ export function getItems() {
 }
 
 export function getItemById(idParams) {
-    return new Promise((resolve) => {
-        let neededItem = data.find((item) => {
-            return item.id === Number(idParams);
-        });
-        setTimeout(()=> resolve(neededItem),1000);
+    return new Promise((resolve, reject) => {
+      let item = data.find((item) => {
+        return item.id === Number(idParams);
+      });
+      setTimeout(() => {
+        if (item === undefined)
+          reject(new Error("No se pudo encontrar el item."));
+        else {
+          resolve(item);
+        }
+      }, 1500);
     });
-}
+  }
