@@ -4,6 +4,7 @@ import DetailedCard from "../CardDetail/CardDetail"
 import { getItemById } from "../services/firebase";
 import {useParams } from "react-router-dom";
 import FlexWrapper from "../FlexWrapper/FlexWrapper";
+import FirebaseApp from "../services/firebase";
 
 function ItemDetailContainer(props) {
     const [item,setItem] = useState([]);
@@ -17,7 +18,7 @@ function ItemDetailContainer(props) {
         })
 
         .catch((error) => {
-            console.log("Catch?")
+            console.log("Error")
             setFbMsg(error.message);
         });
 

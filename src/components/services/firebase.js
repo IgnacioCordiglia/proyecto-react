@@ -69,10 +69,11 @@ const firebaseConfig = {
   export async function getItemById(idParams) {
     const docRef = doc(db, "items", idParams);
     const docResult = await getDoc(docRef);
-
+    return new Promise((resolve, reject) => {
     if (docResult.exists()) {
-      return { id: docResult.id, ...docResult.data() };
-    }
+      resolve({id: docResult.id, ...docResult.data() });
+    } else reject(new Error("No se pudo encontrar el item."));
+    }, 1500);
   }
 
   export async function getCategory(idCategoryParams) {
