@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from "react";
 import "./itemdetailcontainer.css";
 import DetailedCard from "../CardDetail/CardDetail"
-import { getItemById } from "../../stockAPI/stockAPI";
+import { getItemById } from "../services/firebase";
 import {useParams } from "react-router-dom";
 import FlexWrapper from "../FlexWrapper/FlexWrapper";
 

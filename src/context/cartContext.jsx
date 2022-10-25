@@ -10,7 +10,6 @@ function CartContextProvider(props) {
     let newItem = { ...item, count };
     newCart.push(newItem);
     setCart(newCart);
-    console.log("recibimos",item,count)
   }
 
   /* function clearCart() */
@@ -33,13 +32,11 @@ function CartContextProvider(props) {
   }
 
   function getTotalPrice() {
-    let devolver = 0;
-    cart.forEach(
-        item => {
-            devolver+=(item.price*item.count);
-        }
-    )
-        return devolver;
+    let total = 0;
+    cart.forEach((itemInCart) => {
+      total += itemInCart.count*itemInCart.price;
+    });
+    return total;
   }
 
   /* function isInCart()  -> Array.some */

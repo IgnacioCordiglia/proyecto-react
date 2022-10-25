@@ -7,6 +7,8 @@ import ClickCounter from './components/itemCount/ItemCount'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import {CartContextProvider} from './context/cartContext'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import CartView from "./components/CartView/CartView";
+import FirebaseApp from './components/services/firebase';
 
 
 function App() {
@@ -19,7 +21,9 @@ function App() {
               <Route path="/" element= {<ItemListContainer title="Más vendidos"/>} />
               <Route path="/category/:categoryId" element = {<ItemListContainer show="category"/>} />
               <Route path="/item/:id" element={<ItemDetailContainer/>} />
-              <Route path="/team/:team" element={<ItemListContainer show="team"/>} />
+              <Route path="/team/:teamId" element={<ItemListContainer show="team"/>} />
+              <Route path="/cart" element={<CartView/>}
+            ></Route>
             </Routes>
           <Footer />
       </BrowserRouter>
