@@ -2,3 +2,54 @@
     font-family: f1_regular;
     color:red;
 }
+
+.cartItemImg {
+    width:25%;
+    height:220px;
+    margin:5px;
+}
+
+.cartItemInfo{
+    width:25%;
+    height:240px;
+}
+
+.divCartItem {
+    width:100%;
+    font-family: f1_regular;
+    display: flex;
+    margin:10px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.cartItemPrice {
+    font-family: f1_bold;
+    font-size:1.5rem;
+    margin:0px;
+}
+
+.removeItemButton {
+    border-radius: 5px;
+    transition: all 0.15s ease-in;
+    font-size: 1.2rem;
+    font-family: f1_bold;
+    border:none;
+}
+
+.TotalPrice {
+    font-family: f1_bold;
+    font-size: 1.5rem;
+}
+
+.removeAllButton {
+    border-radius: 5px;
+    transition: all 0.15s ease-in;
+    font-size: 1rem;
+    font-family: f1_regular;
+    border:none;
+    padding:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}

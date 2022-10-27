@@ -1,0 +1,43 @@
+.divForm{
+    font-family: f1_bold;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    height:340px;
+}
+
+.labelForm{
+    font-size: 1.2rem;
+    color:red;
+    margin-bottom:5px;
+}
+
+input {
+    width: 100%;
+    height: 25px;
+    font-size: 1.1rem;
+    font-family: f1_regular;
+}
+
+.buttonForm {
+        font-family: "f1_regular";
+        margin-left: 40%;
+        margin-top:10px;
+        border-radius: 5px;
+        height:40px;
+        transition: all 0.15s ease-in;
+        border:none;
+        padding-top: 2%;
+        padding-bottom: 2%;
+}
+
+.buttonForm {
+    background-color:#383840;
+    color:white;
+}
+
+.labelInputForm{
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top:30px;
+}

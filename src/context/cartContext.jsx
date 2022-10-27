@@ -10,15 +10,15 @@ function CartContextProvider(props) {
     let newItem = { ...item, count };
     newCart.push(newItem);
     setCart(newCart);
+    console.log(newItem.count)
   }
 
-  /* function clearCart() */
   function clearCart() {
     setCart([]);
   }
 
   function removeItem(idToRemove) {
-    let newCart = cart.filter((itemInCart) => itemInCart.id !== idToRemove);
+    let newCart = cart.filter((itemInCart) => (itemInCart.id !== idToRemove));
     setCart(newCart);
   }
 
@@ -43,7 +43,9 @@ function CartContextProvider(props) {
 
   return (
     <>
-      <cartContext.Provider value={{ cart, addToCart, getTotalItemCount, removeItem }}>
+      <cartContext.Provider
+        value={{cart, addToCart, getTotalPrice, getTotalItemCount, removeItem, clearCart}}
+      >
         {props.children}
       </cartContext.Provider>
     </>

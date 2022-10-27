@@ -31,6 +31,8 @@ function ItemDetailContainer(props) {
           ) :
         (<div className="container">
             <DetailedCard
+                        key={item.id}
+                        id={item.id}
                         title={item.title}
                         img={item.img}
                         price={item.price}

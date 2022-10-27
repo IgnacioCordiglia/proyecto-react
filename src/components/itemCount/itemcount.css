@@ -7,38 +7,23 @@
     margin-bottom:5%;
 }
 
-.addCartButton {
-    font-family: "f1_regular";
-    margin-left: 10px;
-    margin-right: 10px;
+.buttonForm {
     border-radius: 5px;
     transition: all 0.15s ease-in;
+    font-size: 1rem;
     border:none;
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
-.clickButton {
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 5px;
-    transition: all 0.15s ease-in;
-    font-size: 1.5rem;
-    border:none;
-    width: 30px;
-    height: 30px;
+    background-color:#383840;
+    color:white;
+    display: flex;
+    align-items: center;
+    height:50px;
+    margin-left: 40%;
 }
 
 .cantItems {
     font-size: 1.5rem;
 }
 
-.clickButton:hover {
-    background-color:#383840;
-    color:white;
-}
-
-.addCartButton:hover {
-    background-color:#383840;
-    color:white;
+.buttonForm:hover {
+    background-color:red;
 }
