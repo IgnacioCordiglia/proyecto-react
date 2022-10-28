@@ -1,0 +1,46 @@
+.clickCounterContainer {
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.cantItems {
+    font-size: 1.5rem;
+}
+
+.buttonForm:hover {
+    background-color:red;
+}
+
+.clickButton {
+    margin-left: 10px;
+    margin-right: 10px;
+    border:none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: all 0.15s ease-in;
+}
+
+.clickButton:hover {
+    background-color:#383840;
+    color:white;
+}
+
+.addCartButton {
+    font-family: "f1_regular";
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: all 0.15s ease-in;
+    border:none;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.addCartButton:hover {
+    background-color:#383840;
+    color:white;
+}
