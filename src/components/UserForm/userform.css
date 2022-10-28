@@ -29,11 +29,8 @@ input {
         border:none;
         padding-top: 2%;
         padding-bottom: 2%;
-}
-
-.buttonForm {
-    background-color:#383840;
-    color:white;
+        background-color:#383840;
+        color:white;
 }
 
 .labelInputForm{

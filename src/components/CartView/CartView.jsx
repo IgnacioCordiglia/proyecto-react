@@ -3,25 +3,10 @@ import { cartContext } from "../../context/cartContext";
 import FlexWrapper from "../FlexWrapper/FlexWrapper";
 import { createBuyOrder } from "../services/firebase";
 import "./cartview.css"
+import UserForm from "../UserForm/UserForm";
 
 function CartView() {
   const { cart, removeItem, getTotalPrice, clearCart } = useContext(cartContext);
-
-  function handleCheckout() {
-    const buyerData = {
-      name: "John",
-      email:"ignaciocordiglia@gmail.com",
-      phone:"+54 2932 000000"
-    };
-  
-
-    const orderData = {
-    buyerData: buyerData,
-    cart: cart,
-    total: getTotalPrice(),
-    date: new Date()
-    }
-    }
 
   return (
     <FlexWrapper>
@@ -43,12 +28,14 @@ function CartView() {
       ))}
       
       {cart.length === 0 ? <></>: 
-        <><h1 className="TotalPrice">Precio Total: ${getTotalPrice()}</h1>
+        <>
+        <h1 className="TotalPrice">Precio Total: ${getTotalPrice()}</h1>
         <div>
         <button className="removeAllButton" onClick={() => {clearCart()}}>Limpiar carrito</button>
-        <button className="removeAllButton" onClick={() => {handleCheckout()}}>Finalizar compra</button>
         </div>
+        <UserForm />
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" />
+        
         </>}
       </FlexWrapper>
       

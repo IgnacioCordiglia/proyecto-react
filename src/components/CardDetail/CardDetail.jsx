@@ -1,6 +1,6 @@
 import "./carddetail.css";
 import React, {useState} from 'react';
-import ItemCount from "../itemCount/ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 import {Link} from "react-router-dom";
 import Loader from "../Loader/Loader";
 import {cartContext} from "../../context/cartContext";

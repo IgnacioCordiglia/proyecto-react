@@ -41,21 +41,19 @@ export default function UserForm() {
 
         createBuyOrder(orderData). then ( respuesta => {
           Toastify({
-            text: "This is a toast",
+            text: "¡Gracias, tu compra se ha completado con exito!",
             duration: 3000,
             destination: "https://github.com/apvarun/toastify-js",
+            
             newWindow: true,
-            close: true,
-            gravity: "top", // `top` or `bottom`
+            gravity: "bottom", // `top` or `bottom`
             position: "left", // `left`, `center` or `right`
             stopOnFocus: true, // Prevents dismissing of toast on hover
             style: {
-              background: "linear-gradient(to right, #00b09b, #96c93d)",
-            },
-            onClick: function(){} // Callback after click
+              background: "green",
+            }// Callback after click
           }).showToast();
           clearCart();
-          Navigate("/");
         })
       }
 
@@ -81,6 +79,6 @@ export default function UserForm() {
         name="phone"
         onChange={onInputChange}
       />
-      <button type="submit" className="buttonForm">Crear orden</button>
+      <button className="removeAllButton" onClick={() => {onSubmit()}}>Finalizar compra</button>
     </form>
   )}

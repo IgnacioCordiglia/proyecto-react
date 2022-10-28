@@ -1,5 +1,5 @@
 import "./card.css";
-import ItemCount from "../itemCount/ItemCount";
+import ItemCount from "../ItemCount/ItemCount";
 import {Link} from "react-router-dom";
 
 export default function Card(props) {

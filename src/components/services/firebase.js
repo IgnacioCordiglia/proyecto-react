@@ -23,7 +23,12 @@ const firebaseConfig = {
     return dataItems;
   }
 
-  export async function createBuyOrder(orderData) {
+  export async function createBuyOrder(orderData){
+    const collectionRef = collection(db, "orders");
+    let respuesta = await addDoc(collectionRef, orderData)
+    return respuesta.id;
+  }
+  /*export async function createBuyOrder(orderData) {
     const batch = writeBatch(db);
     const collectionRef = collection(db, "orders");
     const collectionItemsRef = collection (db, "items");
@@ -44,7 +49,7 @@ const firebaseConfig = {
 
     let respuesta = await addDoc(collectionRef, orderData);
     return respuesta;
-  }
+  }*/
 
   export async function sendDataToFirebase() {
     const data = [
