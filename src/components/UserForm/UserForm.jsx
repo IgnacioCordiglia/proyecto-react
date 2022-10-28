@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { createBuyOrder } from "../services/firebase";
-import { useNavigate } from "react-router-dom";
 import Toastify from 'toastify-js'
 import "toastify-js/src/toastify.css"
-import { Navigate } from "react-router-dom";
 import InputForm from "./InputForm";
 import {cartContext} from "../../context/cartContext";
 import {useContext} from "react";
@@ -11,7 +9,6 @@ import './userform.css';
 
 
 export default function UserForm() {
-  const navigate = useNavigate();
   const { cart, getTotalPrice, clearCart } = useContext(cartContext);
 
   const [userData, setUserData] = useState({
@@ -39,9 +36,8 @@ export default function UserForm() {
             date: new Date()
         };
 
-        createBuyOrder(orderData). then ( respuesta => {
-          Toastify({
-            text: "¡Gracias, tu compra se ha completado con exito!",
+        createBuyOrder(orderData).then(respuesta => {
+          Toastify({text:"¡Gracias, tu compra se ha completado con exito!",
             duration: 3000,
             destination: "https://github.com/apvarun/toastify-js",
             
