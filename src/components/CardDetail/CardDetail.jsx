@@ -1,7 +1,6 @@
 import "./carddetail.css";
 import React, {useState} from 'react';
 import ItemCount from "../ItemCount/ItemCount";
-import {Link} from "react-router-dom";
 import Loader from "../Loader/Loader";
 import {cartContext} from "../../context/cartContext";
 import {useContext} from "react";
@@ -12,7 +11,7 @@ export default function Card(props) {
 
   function handleAddToCart(count) {
       addToCart(props, count);
-;    setCount(count);
+      setCount(count);
   }
 
   if (props.title)
